@@ -2,7 +2,6 @@
 'use strict'
 
 const assert = require('assert')
-// const moment = require('moment')
 const NATIVE_TYPES = require('../../lib/types')
 
 describe('Momy Types', () => {

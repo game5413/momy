@@ -3,7 +3,7 @@
 
 const assert = require('assert')
 const co = require('co')
-const moment = require('moment')
+const dayjs = require('dayjs')
 const mongo = require('mongodb').MongoClient
 const Tailer = require('../../lib/tailer.js')
 const wait = require('../wait')
@@ -75,12 +75,12 @@ describe('Momy: core', () => {
     const r1 = yield my.query(`SELECT * FROM ${colName} WHERE _id = "${r0.insertedId}"`)
 
     assert.equal(
-      moment(r1[0].field1).format('YYYY-MM-DD'),
-      moment(now).format('YYYY-MM-DD'))
+      dayjs(r1[0].field1).format('YYYY-MM-DD'),
+      dayjs(now).format('YYYY-MM-DD'))
     assert.equal(
-      moment(r1[0].field2).format('YYYY-MM-DD HH:mm:ss'),
-      moment(now).format('YYYY-MM-DD HH:mm:ss'))
-    assert.equal(r1[0].field3, moment(now).format('HH:mm:ss'))
+      dayjs(r1[0].field2).format('YYYY-MM-DD HH:mm:ss'),
+      dayjs(now).format('YYYY-MM-DD HH:mm:ss'))
+    assert.equal(r1[0].field3, dayjs(now).format('HH:mm:ss'))
   }))
 
   it('syncs a single doc with date types (object edition) #15', co.wrap(function* () {
@@ -96,12 +96,12 @@ describe('Momy: core', () => {
     const r1 = yield my.query(`SELECT * FROM ${colName} WHERE _id = "${r0.insertedId}"`)
 
     assert.equal(
-      moment(r1[0].field1).format('YYYY-MM-DD'),
-      moment(now).format('YYYY-MM-DD'))
+      dayjs(r1[0].field1).format('YYYY-MM-DD'),
+      dayjs(now).format('YYYY-MM-DD'))
     assert.equal(
-      moment(r1[0].field2).format('YYYY-MM-DD HH:mm:ss'),
-      moment(now).format('YYYY-MM-DD HH:mm:ss'))
-    assert.equal(r1[0].field3, moment(now).format('HH:mm:ss'))
+      dayjs(r1[0].field2).format('YYYY-MM-DD HH:mm:ss'),
+      dayjs(now).format('YYYY-MM-DD HH:mm:ss'))
+    assert.equal(r1[0].field3, dayjs(now).format('HH:mm:ss'))
   }))
 
   it('syncs a single doc with string types', co.wrap(function* () {

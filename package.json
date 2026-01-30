@@ -21,7 +21,6 @@
     "lodash.clonedeep": "^4.5.0",
     "mongodb": "^7.0.0",
     "mysql2": "^3.16.2",
-    "nano-string-utils": "^0.28.0",
     "sqlstring": "^2.2.0",
     "text-case": "^1.2.10"
   },

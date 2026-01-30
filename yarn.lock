@@ -127,7 +127,6 @@ __metadata:
     lodash.clonedeep: "npm:^4.5.0"
     mongodb: "npm:^7.0.0"
     mysql2: "npm:^3.16.2"
-    nano-string-utils: "npm:^0.28.0"
     sqlstring: "npm:^2.2.0"
     text-case: "npm:^1.2.10"
   bin:
@@ -202,15 +201,6 @@ __metadata:
   dependencies:
     lru.min: "npm:^1.1.0"
   checksum: 10c0/65b7ffaf932a371602e4153808601e8f377d7fc85fa15b491ee821418e52ab4950155b840803a6eaf3d5b94d6e8aedc1bee723475541cb4713feb3544dca9336
-  languageName: node
-  linkType: hard
-
-"nano-string-utils@npm:^0.28.0":
-  version: 0.28.0
-  resolution: "nano-string-utils@npm:0.28.0"
-  bin:
-    nano-string: bin/nano-string.js
-  checksum: 10c0/37304b6700a4e643cfe80ffaea5e3a689a2ce44000aa0adba4fb72d82c6b6f380b9fcd584325f683df69e37e9dbafc1b28f2ffed1a58dbb9b36d31c28cbdfac6
   languageName: node
   linkType: hard
 
